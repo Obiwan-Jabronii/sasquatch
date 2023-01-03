@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {ApolloClient} from '@apollo/client';
+import {ApolloClient, createHttpLink} from '@apollo/client';
 
 import Home from './pages/Home';
 import Merch from './pages/Merch';
@@ -10,11 +10,18 @@ import Video from './pages/Video';
 
 import Nav from './components/Nav';
 
+const httpLink = createHttpLink({
+  uri:'/graphql',
+});
+
+const client = new ApolloClient({
+  link: httpLink
+});
 
 function App() {
   return (
     <div className="App">
-      <ApolloClient>
+      <ApolloClient client={client}>
         <Router>
           <div>
             <Nav />
