@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+main {
+  max-width: 90%;
+  margin: 0 auto;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: rgb(93, 64, 41);
+  --secondry: rgb(31, 81, 33);
+  --tertiary: rgb(189, 122, 71);
+  --light: #fafafa;
+  --dark: #000000;
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-three: calc(1rem * 1.5);
+  --spacing-four: calc(1rem * 2.0);
+}
+
+.jumbotron {
+  background-image: url(../public/images/redPines.jpg);
+  min-height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 60px;
+  color: var(--light);
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mx-1 {
+  margin-left: var(--spacing-one);
+  margin-right: var(--spacing-one)
+}
+
+.mx-2 {
+  margin-left: var(--spacing-two);
+  margin-right: var(--spacing-two)
+}
+
+.mx-3 {
+  margin-right: var(--spacing-three);
+  margin-left: var(--spacing-three);
+}
+
+.mx-4 {
+  margin-right: var(--spacing-four);
+  margin-left: var(--spacing-four);
+}
+
+.my-1 {
+  margin-top: var(--spacing-one);
+  margin-bottom: var(--spacing-one);
+}
+
+.my-2 {
+  margin-top: var(--spacing-two);
+  margin-bottom: var(--spacing-two);
+}
+
+.my-3 {
+  margin-top: var(--spacing-three);
+  margin-bottom: var(--spacing-three);
+}
+
+.my-4 {
+  margin-top: var(--spacing-four);
+  margin-bottom: var(--spacing-four);
+}
+
+
+.link {
+  font-size: 2rem;
+  color: var(--light);
+  
+}
+
+a {
+  color: var(--light);
 }

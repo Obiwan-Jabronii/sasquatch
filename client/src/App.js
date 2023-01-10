@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {ApolloClient, createHttpLink} from '@apollo/client';
+import {ApolloClient, createHttpLink, InMemoryCache, ApolloProvider} from '@apollo/client';
 
 import Home from './pages/Home';
 import Merch from './pages/Merch';
@@ -15,13 +15,14 @@ const httpLink = createHttpLink({
 });
 
 const client = new ApolloClient({
-  link: httpLink
+  link: httpLink,
+  cache: new InMemoryCache(),
 });
 
 function App() {
   return (
     <div className="App">
-      <ApolloClient client={client}>
+      <ApolloProvider client={client}>
         <Router>
           <div>
             <Nav />
@@ -33,7 +34,7 @@ function App() {
             </Switch>
           </div>
         </Router>
-      </ApolloClient>
+      </ApolloProvider>
     </div>
   );
 }

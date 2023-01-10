@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const Nav = () => {
@@ -10,11 +10,11 @@ const Nav = () => {
 
                 </img>
             </div>
-            <div className="links">
-                <ul>
-                    <li><Link to="/video"></Link></li>
-                    <li><Link to="/merch"></Link></li>
-                    <li><Link to="/contact"></Link></li>
+            <div>
+                <ul className="links">
+                    <li className="mx-3 link"><Link to="/video">Videos</Link></li>
+                    <li className="mx-3 link"><Link to="/merch">Merch</Link></li>
+                    <li className="mx-3 link"><Link to="/contact">Contact</Link></li>
                 </ul>
             </div>
         </div>
